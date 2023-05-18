@@ -1,0 +1,25 @@
+{
+  "name": "akvo_pcaf_api-v1.0.0",
+  "version": "1.0.0",
+  "description": "API teste pcaf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akvo-esg/pcaf_api.git"
+  },
+  "keywords": [
+    "pcafapi"
+  ],
+  "author": "João Serafin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akvo-esg/pcaf_api/issues"
+  },
+  "homepage": "https://github.com/Akvo-esg/pcaf_api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
