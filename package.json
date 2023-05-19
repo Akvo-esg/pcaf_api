@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Akvo-esg/pcaf_api.git"
   },
+  "keywords": [
+    "pcafapi"
+  ],
   "author": "João Serafin",
   "license": "ISC",
   "bugs": {
