@@ -19,9 +19,9 @@ app.post('/teste', (req, res) => {
 
     console.log(req)
 
-    const result = c1 + c2 + c3
+    // const result = c1 + c2 + c3
 
-    return res.json({ result: result })
+    return res.json({ result: req })
 })
 
 app.listen(3333)
