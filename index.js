@@ -22,7 +22,7 @@ app.get('/teste', (req, res) => {
 
     const {c1, c2, c3} = req.query
 
-    const result = c1/(c2+c3+c1)
+    const result = +c1/(+c2 + +c3 + +c1)
 
     return res.json({ result })
 })
