@@ -13,6 +13,8 @@ app.get('/atualizou', (req, res) => {
 app.post('/teste', (req, res) => {
     const { c1, c2, c3 } = req.body
 
+    console.log(req)
+
     const result = c1 + c2 + c3
 
     return res.json({ result: result })
