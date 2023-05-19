@@ -19,13 +19,12 @@ app.get('/meupau', (req, res) => {
 })
 
 app.post('/teste', (req, res) => {
-   
 
-    console.log(req)
+    const { c1, c2, c3 } = req.body
 
-    // const result = c1 + c2 + c3
+    const result = c1 / (c2 + c3 + c1)
 
-    return res.json({ result: 'lala'})
+    return res.json({ result: result })
 })
 
 app.listen(3333)
