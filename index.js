@@ -20,9 +20,11 @@ app.get('/meupau', (req, res) => {
 
 app.get('/teste', (req, res) => {
 
-    const { name, date } = req.query
+    const {c1, c2, c3} = req.query
 
-    return res.json({ name, date })
+    const result = c1/(c2+c3+c1)
+
+    return res.json({ result })
 })
 
 app.listen(3333)
