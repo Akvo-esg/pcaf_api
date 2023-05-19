@@ -18,9 +18,9 @@ app.get('/meupau', (req, res) => {
     return res.json({ message: 'meu pau is up' })
 })
 
-app.post('/teste', (req, res) => {
+app.get('/teste', (req, res) => {
 
-    const { name, date } = req.body
+    const { name, date } = req.query
 
     return res.json({ name, date })
 })
