@@ -20,7 +20,11 @@ app.get('/meupau', (req, res) => {
 
 app.post('/teste', (req, res) => {
 
-    return res.json({ result:  req})
+    console.log(req)
+
+    const response = req
+
+    return res.json({ result:  response})
 })
 
 app.listen(3333)
