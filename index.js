@@ -20,9 +20,11 @@ app.get('/meupau', (req, res) => {
 
 app.get('/teste', (req, res) => {
 
-    const {c1, c2, c3} = req.query
+    // const {c1, c2, c3} = req.query
 
-    const result = +c1/(+c2 + +c3 + +c1)
+    // const result = +c1/(+c2 + +c3 + +c1)
+
+    const result = req.query
 
     return res.json({ result })
 })
