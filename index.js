@@ -24,7 +24,7 @@ app.get('/teste', (req, res) => {
 
     // const result = +c1/(+c2 + +c3 + +c1)
 
-    const result = req.query
+    const result = JSON.parse(req.query[0])
 
     return res.json({ result })
 })
