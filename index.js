@@ -24,9 +24,20 @@ app.get('/teste', (req, res) => {
 
     // const result = +c1/(+c2 + +c3 + +c1)
 
-    const result = JSON.parse(req.query[0])
+    const data = JSON.parse(req.query[0])
 
-    return res.json({ result })
+    const valorEmprestimo = +data.valorEmprestimo
+    const capitalProprio = +data.capitalProprio
+    const recursosTerceiros = +data.recursosTerceiros
+
+    const result = valorEmprestimo / (capitalProprio + recursosTerceiros + valorEmprestimo)
+
+    const response = {
+        fatorAtribuicao: result
+    }
+
+
+    return res.json({ response: JSON.stringify(response) })
 })
 
 app.listen(3333)
