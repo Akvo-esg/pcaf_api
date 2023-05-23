@@ -44,7 +44,7 @@ app.get('/teste', (req, res) => {
 
 app.get('/pcafCalculator', (req, res) => {
 
-    const data = JSON.parse(req.query)
+    const data = req.query
 
     const valorEmprestimo = +data.valorEmprestimo
     const capitalProprio = +data.capitalProprio
@@ -56,7 +56,7 @@ app.get('/pcafCalculator', (req, res) => {
         fatorAtribuicao: result
     }
 
-    return res.json({ response: result})
+    return res.json({ response: result })
 
 })
 
