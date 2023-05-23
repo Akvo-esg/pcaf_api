@@ -40,4 +40,24 @@ app.get('/teste', (req, res) => {
     return res.json({ response: JSON.stringify(response) })
 })
 
+
+
+app.get('/pcafCalculator', (req, res) => {
+
+    const data = JSON.parse(req.query)
+
+    const valorEmprestimo = +data.valorEmprestimo
+    const capitalProprio = +data.capitalProprio
+    const recursosTerceiros = +data.recursosTerceiros
+
+    const result = valorEmprestimo / (capitalProprio + recursosTerceiros + valorEmprestimo)
+
+    const response = {
+        fatorAtribuicao: result
+    }
+
+    return res.json({ response: JSON.stringify(response) })
+
+})
+
 app.listen(3333)
