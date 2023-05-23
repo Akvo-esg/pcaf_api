@@ -49,14 +49,17 @@ app.get('/pcafCalculator', (req, res) => {
     const valorEmprestimo = +data.valorEmprestimo
     const capitalProprio = +data.capitalProprio
     const recursosTerceiros = +data.recursosTerceiros
+    const emissaoGee = +data.emissaoGee
 
-    const result = valorEmprestimo / (capitalProprio + recursosTerceiros + valorEmprestimo)
+    const fatorAtribuicao = valorEmprestimo / (capitalProprio + recursosTerceiros + valorEmprestimo)
 
-    const response = {
-        fatorAtribuicao: result
-    }
+    const emissaoFinanciada = fatorAtribuicao * emissaoGee
 
-    return res.json({ response: result })
+
+    return res.json({
+        fatorAtribuicao: fatorAtribuicao,
+        emissaoFinanciada: emissaoFinanciada
+    })
 
 })
 
